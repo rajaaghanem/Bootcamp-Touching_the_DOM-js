@@ -19,6 +19,8 @@
     </body>
     <script>
     
+    // 1
+
     const p= document.getElementsByTagName('p');
     const a = document.getElementsByTagName('a');
     const img = document.getElementsByTagName('img');
@@ -29,9 +31,9 @@
 
     const allEl=document.querySelectorAll('p, a, img, div, input');
     console.dir(allEl);
-    const p = allEl[0];
-    const a = allEl[1];
-    const img = allEl[2];
+    const p1 = allEl[0];
+    const a1 = allEl[1];
+    const img1 = allEl[2];
     const div1= allEl[3];
     const div2 = allEl[4];
     const input1 = allEl[5];
@@ -42,5 +44,9 @@
         console.log(el);
     }
 
+    // 3 
+    const allinputs=document.querySelectorAll('input');
+    console.dir(allinputs);
+    allinputs.forEach( el => console.log(el));
     </script>
 </html>
