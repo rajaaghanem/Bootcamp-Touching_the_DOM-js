@@ -18,7 +18,14 @@
     <input type="text" />
     </body>
     <script>
-        // 2
+    
+    const p= document.getElementsByTagName('p');
+    const a = document.getElementsByTagName('a');
+    const img = document.getElementsByTagName('img');
+    const div = document.getElementsByTagName('div');
+    const input = document.getElementsByTagName('input');
+
+    // 2
 
     const allEl=document.querySelectorAll('p, a, img, div, input');
     console.dir(allEl);
@@ -34,6 +41,6 @@
     for (let el of allEl){
         console.log(el);
     }
-    
+
     </script>
 </html>
