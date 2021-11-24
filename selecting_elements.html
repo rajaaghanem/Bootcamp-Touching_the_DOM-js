@@ -48,5 +48,11 @@
     const allinputs=document.querySelectorAll('input');
     console.dir(allinputs);
     allinputs.forEach( el => console.log(el));
+
+    const allinputs2=document.getElementsByTagName('input');
+    console.dir(allinputs2);
+    const arr = [...allinputs2];
+    arr.forEach( el => console.log(el));
+
     </script>
 </html>
