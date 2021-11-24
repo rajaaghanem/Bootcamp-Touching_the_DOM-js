@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
+ </head>
+ <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+    </body>
+    <script>
+        // 2
+
+    const allEl=document.querySelectorAll('p, a, img, div, input');
+    console.dir(allEl);
+    const p = allEl[0];
+    const a = allEl[1];
+    const img = allEl[2];
+    const div1= allEl[3];
+    const div2 = allEl[4];
+    const input1 = allEl[5];
+    const input2 = allEl[6];
+    const input3 = allEl[7];
+
+    for (let el of allEl){
+        console.log(el);
+    }
+    
+    </script>
+</html>
