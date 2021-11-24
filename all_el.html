@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myFirstDiv"></div>
+    <div id="mySecondDiv"></div>
+    <div id="myThridDiv"></div>
+    <div id="myFourthDiv"></div>
+     <script>
+         const all = document.querySelectorAll('div');
+         const newObj = {};
+         all.forEach((el)=> newObj[el.id]=el)
+        console.dir(newObj);
+     </script>
+</body>
+</html>
+
+
+
+
