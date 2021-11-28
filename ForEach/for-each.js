@@ -24,7 +24,7 @@ var orderList = document.createElement('ol');
 
 users.forEach((el)=>{
     let li=document.createElement("li");
-    li.setAttribute("data-id" , `${Math.floor(Math.random() * 100)}`);
+    li.setAttribute("data-id" , `${el.id}`);
     li.textContent=`${el.firstName} ${el.lastName}`;
     orderList.append(li);
 })
