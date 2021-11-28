@@ -24,7 +24,7 @@ var orderList = document.createElement('ol');
 
 users.forEach((el)=>{
     let li=document.createElement("li");
-    li.id= `data-id=${Math.floor(Math.random() * 100)}`;
+    li.setAttribute("data-id" , `${Math.floor(Math.random() * 100)}`);
     li.textContent=`${el.firstName} ${el.lastName}`;
     orderList.append(li);
 })
@@ -40,4 +40,5 @@ orderList.style.listStyleType="none";
 //! 3
 
 // i added this line to the 1 method. 
-// li.id= `data-id=${Math.floor(Math.random() * 100)}`;
+// li.setAttribute("data-id" , `${Math.floor(Math.random() * 100)}`);
+
