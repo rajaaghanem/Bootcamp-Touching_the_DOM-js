@@ -1,6 +1,5 @@
-let textAdd = document.createElement("input");
-textAdd.setAttribute("type","textarea");
-
-let enventAdd = document.querySelector(".paste-event");
-enventAdd.append(textAdd);
-
+function nextArea(current,idNum){
+if (document.querySelector(`#${current}`).value.length == 1){
+    document.querySelector(`#${idNum}`).focus();
+}
+}

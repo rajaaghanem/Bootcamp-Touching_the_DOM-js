@@ -7,7 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class = "paste-event"></div>
+    <form class = "paste-event">
+        <input id = "a"  type="text" onkeyup="nextArea('a','b')" maxlength="1">
+        <input id = "b"  type="text" onkeyup="nextArea('b','c')" maxlength="1">
+        <input id = "c"  type="text" onkeyup="nextArea('c','d')" maxlength="1">
+        <input id = "d"  type="text" onkeyup="nextArea('d','e')" maxlength="1">
+        <input id = "e"  type="text" onkeyup="nextArea('e','f')" maxlength="1">
+        <input id = "f"  type="text" onkeyup="nextArea('f','a')" maxlength="1">
+    </form>
 </body>
 <script src="/event.js"></script>
 </html>
