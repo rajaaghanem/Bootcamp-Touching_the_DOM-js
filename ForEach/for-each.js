@@ -19,11 +19,13 @@ const users = [
     },
 ];
 
+//! 1
 var orderList = document.createElement('ol');
 
 users.forEach((el)=>{
     let li=document.createElement("li");
-    li.textContent=`${el.firstName} ${el.lastName}`
+    li.id= `data-id=${Math.floor(Math.random() * 100)}`;
+    li.textContent=`${el.firstName} ${el.lastName}`;
     orderList.append(li);
 })
 
@@ -31,3 +33,11 @@ const list = document.querySelector(".list");
 list.append(orderList);
 console.dir(orderList);
 
+//!2 
+
+orderList.style.listStyleType="none";
+
+//! 3
+
+// i added this line to the 1 method. 
+// li.id= `data-id=${Math.floor(Math.random() * 100)}`;
