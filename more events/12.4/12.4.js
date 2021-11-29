@@ -1,5 +1,4 @@
 let img = document.querySelector("img");
-let back= document.querySelector(".back");
 
 img.style.filter="invert(100%)"
 
