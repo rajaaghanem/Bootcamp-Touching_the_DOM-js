@@ -16,6 +16,7 @@ txt.addEventListener('keyup', (event)=>{
             img.style.width="100px";
             container.appendChild(img);
         }
+        txt.value=" ";
      })
 
 })
