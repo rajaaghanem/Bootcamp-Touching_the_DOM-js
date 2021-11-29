@@ -1,6 +1,4 @@
-let img = document.querySelector("img");
-
-img.style.filter="invert(100%)"
+const img = document.querySelector("img");
 
 img.addEventListener('mouseover', (event)=>{
     img.style.filter="invert(0)"
