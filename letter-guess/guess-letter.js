@@ -5,9 +5,9 @@ const keyGuessedP= document.querySelector(".key-guessed");
 const yesBtn = document.querySelector(".start-again");
 const shoWrongLettes = document.querySelector(".show-wrong-letters");
 
-// const lettersArray = ['a','b','c','d','e'];
-const lettersArray = ['a'];
-const wrongLetters = [];
+const lettersArray = ['a','b','c','d','e'];
+// const lettersArray = ['a'];
+let wrongLetters = [];
 
 random = Math.floor(Math.random() * lettersArray.length);
 let secretLetter = lettersArray[random];
@@ -31,9 +31,21 @@ function isMatch(input){
    return (input == secretLetter)? true:false;
 }
 
+//reset to the initial values
+function resetFun(){
+    random = Math.floor(Math.random() * lettersArray.length);
+    let secretLetter = lettersArray[random];
+    messages.innerText = "Guess a letter";
+    messages.style.color = "black";
+    hiddin.innerText = "?";
+    keyGuessedP.innerText = "Key guessed";
+    shoWrongLettes.innerText = "";
+    wrongLetters = [];
+}
 
 gameBody.addEventListener('keypress', (event)=>{
     const userInput = event.key;
+if (startFlag){
    if (isValidLetter(userInput)){  //the input is a letter
         
         if(isMatch(userInput))  { //there is a match
@@ -43,6 +55,7 @@ gameBody.addEventListener('keypress', (event)=>{
         keyGuessedP.innerText = "Would you like to play again?"
         shoWrongLettes.innerText = "";
         yesBtn.style.visibility = "visible";
+        startFlag = false;
         
        }
 
@@ -51,7 +64,8 @@ gameBody.addEventListener('keypress', (event)=>{
                 messages.innerText = `${userInput} has already been guessed`;
                 messages.style.color ="red";
             }          
-            else{                         //not exist in wrong letters array
+            else{           
+                messages.innerText = "Nope, wrong letter";              //not exist in wrong letters array
                 wrongLetters.push(event.key);
                 shoWrongLettes.innerText = wrongLetters;
             } 
@@ -64,4 +78,13 @@ gameBody.addEventListener('keypress', (event)=>{
         messages.style.color ="red";
     }
     
+}
+
 })
+
+yesBtn.addEventListener('click',(event)=> {
+    startFlag=true;
+    resetFun();
+
+})
+
