@@ -23,8 +23,8 @@ function main(currentTime){
     if(secoundsSinceLastRender < 1 / SNAKE_SPEED) return;
     lastRenderTime = currentTime;
 
-    update();
-    draw();
+    update(); 
+    draw(); 
 }
 
 window.requestAnimationFrame(main)
