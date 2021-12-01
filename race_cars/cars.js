@@ -4,7 +4,6 @@ const car2 = document.querySelectorAll(".secound");
 const bodyGame = document.querySelector('body');
 let count1 =1;
 let count2 =1;
-console.dir(car1);
 
 bodyGame.addEventListener('keyup', (event)=>{
     if (event.key == 'ArrowRight'){
