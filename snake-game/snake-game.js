@@ -12,7 +12,10 @@ const gameBoard = document.querySelector("#game-board");
 function main(currentTime){
 
     if(gameOver){
-        return alert("you lose")
+        if (confirm('you lost, Press ok to restart the game')){
+            location.reload();
+        }
+        return;
     } 
 
     window.requestAnimationFrame(main)
