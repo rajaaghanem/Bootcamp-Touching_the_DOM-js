@@ -14,7 +14,7 @@ console.log(this);
 //    };
 //    myObj.greet();
 
-//! this.name is undefined because it referce to window, and window doesnt have a name variable
+//! this.name is undefined because it referce to the object (his owner)
 //! 
 const myObj = {
     name: "Timmy",

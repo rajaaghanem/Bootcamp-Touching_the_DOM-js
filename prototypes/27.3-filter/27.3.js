@@ -43,4 +43,4 @@ Array.prototype.myReduce = function(callBackFunction){
     return prev;
 }
 
-console.log(array.myReduce((prev,curr)=> prev+=curr));
+console.log(array.myReduce((prev,curr)=> prev+curr));
