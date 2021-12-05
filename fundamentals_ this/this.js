@@ -54,3 +54,15 @@ document.querySelector(".element").addEventListener('click',(event) => {
     let that = document.querySelector(".element");
     console.log(that);
 });
+
+//23.2
+
+const storm = {
+    superPower: "controling the weather",
+    printSuperPower() {
+    console.log("my superpower is " + this.superPower);
+   }
+}
+
+storm.printSuperPower();
+
