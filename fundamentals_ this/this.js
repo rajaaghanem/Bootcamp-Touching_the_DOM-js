@@ -51,5 +51,6 @@ document.querySelector(".element").addEventListener('click',() => {
 //! fix it :
 
 document.querySelector(".element").addEventListener('click',(event) => {
-    console.log(document.querySelector(".element"));
+    let that = document.querySelector(".element");
+    console.log(that);
 });
