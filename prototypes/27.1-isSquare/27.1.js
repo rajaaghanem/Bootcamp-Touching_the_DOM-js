@@ -8,6 +8,7 @@ function Square(a, b, c, d){
 let sq = new Square(11,11,11,11);
 
 Square.prototype.isSquare = function (){
+
     return (this.a === this.b && this.b===this.c && this.c===this.d)? true:false;
 }
 

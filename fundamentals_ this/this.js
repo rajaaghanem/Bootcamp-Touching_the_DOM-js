@@ -18,11 +18,12 @@ console.log(this);
 //! 
 const myObj = {
     name: "Timmy",
-    greet: () => {
-    console.log(`Hello ${myObj.name}`);
-    },
+    greet: function() {
+    console.log(`Hello ${this.name}`);
+    }
    };
-   myObj.greet();
+
+myObj.greet();
 
 // Question 3:
 //! this refere to the window - the global scope, myFunDec isnt in any other scope. 
