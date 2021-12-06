@@ -6,7 +6,6 @@ const batman = {
 };
 
 const superHeroes = [wonderWoman, batman];
-console.log(superHeroes);
 
 function printName() {
   console.log(`my name is ${this.name}`);
@@ -17,6 +16,5 @@ function printHeroes(heroes, printFunc) {
         printFunc.apply(heroes[i]);
     }
 }
-
 
 printHeroes(superHeroes, printName);
