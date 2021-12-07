@@ -1,21 +1,21 @@
-const  makeAllCaps = (array)=>{
+const makeAllCaps = (array)=>{
     return new Promise ((resolve, reject)=>{
-
         for(let i=0; i< array.length; i++){
             if (array[i].toUpperCase() === array[i].toLowerCase())
             reject("it's not a string!");
-              array[i] = array[i].toUpperCase();
+            array[i] = array[i].toUpperCase();
     };
         resolve(array);
     })
 }
 
+
 const sortWords = (array) =>{
     return new Promise((resolve, reject)=>{
-        // for(let i=0; i< array.length; i++){
-        //     if (array[i].toUpperCase() === array[i].toLowerCase())
-        //     reject("it's not a string!");
-        // };
+        for(let i=0; i< array.length; i++){
+            if (array[i].toUpperCase() === array[i].toLowerCase())
+            reject("it's not a string!");
+        };
         array.sort();
         resolve(array);
     })
