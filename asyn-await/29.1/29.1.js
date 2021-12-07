@@ -32,13 +32,39 @@ const getRecipe = (recipeID) => {
   });
 };
 
-getRecipe(4).then((data)=> console.log(data));
+getRecipe(4).then((data) => console.log(data));
 
-async function fun2 (){
-    const res = await getRecipe(4);
-    console.log(res);  
+async function fun2() {
+  const res = await getRecipe(4);
+  console.log(res);
 }
 
 fun2();
 
-//3 
+//3
+
+getIDs()
+  .then((IDs) => {
+    console.log(IDs);
+    return getRecipe(IDs[2]);
+  })
+  .then((recipe) => {
+    console.log(recipe);
+  })
+  .catch((error) => {
+    console.log("It is an error!");
+  });
+
+
+async function fun3() {
+  try {
+    const res = await getIDs();
+    console.log(res);
+    const res2 = await getRecipe(res[2]);
+    console.log(res2);
+  } catch (error) {
+    console.log("It is an error!");
+  }
+}
+
+fun3();
