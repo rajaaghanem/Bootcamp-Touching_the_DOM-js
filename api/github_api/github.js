@@ -40,3 +40,4 @@ function creatingTheGit(data){
     publicRep.innerText = data.public_repos;
     contianer.appendChild(publicRep);
 }
+
