@@ -8,9 +8,10 @@ let arrayOfUsers =[];
 
 searchBtn.addEventListener('click', ()=>{
     userName = inputBtn.value;
+    inputBtn.value = "";
    
-    if(!arrayOfUsers.includes(inputBtn.value)){
-        arrayOfUsers.push(inputBtn.value);
+    if(!arrayOfUsers.includes(userName)){
+        arrayOfUsers.push(userName);
         getFetch(userName);
     }
     
@@ -27,6 +28,8 @@ async function getFetch (searchName){
 function creatingTheGit(data){
     const avatar = document.createElement('img');
     avatar.src = data.avatar_url;
+    avatar.width = "200";
+    avatar.height = "200";
     contianer.appendChild(avatar);
 
     const nameOf = document.createElement('div');
@@ -36,6 +39,4 @@ function creatingTheGit(data){
     const publicRep = document.createElement('div');
     publicRep.innerText = data.public_repos;
     contianer.appendChild(publicRep);
-
-    arrayOfUsers.push(contianer.innerHTML);
 }
