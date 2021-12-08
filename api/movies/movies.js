@@ -7,18 +7,17 @@ searchBtn.addEventListener("click", () => {
 
     movieName = inputBtn.value;
     inputBtn.value = "";
-    movieName = movieName.split(" ").join('+');
-    console.log(movieName);
-
+    // movieName = movieName.split(" ").join('+');
     getFetch(movieName);
   });
 
 
 async function  getFetch(movieName){
     const res = await fetch(`http://www.omdbapi.com/?apikey=7b76035d&t=${movieName}`);
-    const data= await res.json();    
-    console.log(data);
+    const data= await res.json(); 
+    if(data.Response === "True")
     creatMovie(data);
+    
 }
 
 function creatMovie(data){
