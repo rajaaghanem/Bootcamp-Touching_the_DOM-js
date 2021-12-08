@@ -24,8 +24,9 @@ async function getFetch (searchName){
         console.log(res);
         const data = await res.json();
         console.log(data);
-        creatingTheGit(data);
+        if(res.ok) creatingTheGit(data);
     }
+    
    catch(error){
     console.log("invalid user name");
    }
